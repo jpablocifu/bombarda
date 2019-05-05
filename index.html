@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../three.js-master/build/three.min.js"></script>
+    <script src="src/loaders/OBJLoader.js"></script>
+    <script src="../libs/OrbitControls.js"></script>
+    <script src="../libs/Pabhoz/Utilities.js"></script>
+    <script src="src/models/Sound.js"></script>
+    <script src="src/models/Control.js"></script>
+    <script src="src/models/CollidableBox.js"></script>
+    <script src="src/models/Player.js"></script>
+    <script src="src/models/Explotando.js"></script>
+    <script src="../libs/Stats.js"></script>
+
+    
+</head>
+
+<body>
+    <!--onload="webGLStart()"-->
+
+    <!-- GUI -->
+    <div id="options">
+        Salir
+    </div>
+    
+    <!-- END GUI -->
+
+    <div id="home"> 
+        <div class="title">Bombarda</div>
+        <div class="start-btn" onclick="gameStart();enableMute()">Comenzar juego</div>
+        <div class="start-btn2" onclick="homeComing()">Configuración</div>
+        <div class="start-btn3" onclick="enableMute();Finalizar()">Salir</div>
+      
+    </div>
+    <div id="settings">
+        
+
+            <audio id="LaLoquiza"src="./assets/songs/HP.mp3"  autoplay controls loop></audio>
+           <script>
+            var sound = document.getElementById("LaLoquiza");
+            function enableMute(){
+                sound.muted=true;
+            }
+
+          </script>
+        
+   
+    </div>
+
+    <div id="results"></div>
+    <div id="app">
+        <canvas id="appCanvas" width="100%" height="100%"> </canvas>
+        <div class="crono" id = "crono">
+                <div class="minutes" id="minutes">0</div>
+                <div class="dospuntos" id="dos">:</div>
+                <div class="segundos" id="segundos">0</div>
+        </div>
+    </div>
+    <script>
+        window.onload = () => {
+            let options = document.querySelector("#options");
+            options.onclick = () => {
+                location.href='index.html';
+            }
+        }
+
+        function gameStart() {
+            showHideGame();
+            webGLStart();
+         
+        }
+
+        function Configuración(){
+            homeComing();
+        }
+
+        function Salir(){
+            Finalizar();
+        }
+
+        function homeComing() {
+            let home = document.querySelector("#home");
+            if (home.style.display != "flex") {
+                if (home.style.display == "") {
+                    home.style.display = "none";
+                }else{
+                    home.style.display = "flex";
+                }
+            }
+            let settings = document.querySelector("#settings");
+            settings.style.display = (settings.style.display != "block") ? "block" : "none";
+            let options2 = document.querySelector("#home");
+            options.style.display = (options.style.display != "block") ? "block" : "none";
+        }
+
+        function showHideGame() {
+            let home = document.querySelector("#home");
+            if (home.style.display != "flex") {
+                if (home.style.display == "") {
+                    home.style.display = "none";
+                }else{
+                    home.style.display = "flex";
+                }
+            }
+            let app = document.querySelector("#app");
+            app.style.display = (app.style.display != "block") ? "block" : "none";
+            let options = document.querySelector("#options");
+            options.style.display = (options.style.display != "block") ? "block" : "none";
+        }
+
+        function Finalizar() {
+            let home = document.querySelector("#home");
+            if (home.style.display != "flex") {
+                if (home.style.display == "") {
+                    home.style.display = "none";
+                }else{
+                    home.style.display = "flex";
+                }
+                let app = document.querySelector(window.close);
+            }
+        } 
+       
+    </script>
+    <script src="src/app.js"></script>
+</body>
+
+</html>
+<!-- npm init -->

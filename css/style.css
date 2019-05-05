@@ -1,0 +1,210 @@
+@font-face {
+    font-family: BadMofo;
+    src: url(../assets/fonts/HARRYP__.TTF);
+  }
+  @font-face {
+    font-family: Motorblock;
+    src: url(../assets/fonts/HARRYP__.TTF);
+  }
+  
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    overflow-y: hidden;
+}
+
+#app{
+    
+    bottom: 10%;
+    width: 100vw;
+    height: 100vh;
+    range: url("../assets/textures/HP3.png");
+    
+ 
+}
+
+#app .crono{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    font-family: BadMofo;
+    text-align: justify;
+    display: inline-flex;
+    align-items: row;
+    padding: 0.1%;
+    background: #000;
+    color: white;
+    border-radius: 5%;
+    width: 3.5%;
+    border: 2px solid rgba(255,255,255,0.8);
+    font-size: 200%;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+#settings {
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    text-align: center;
+    flex-flow: column;
+    align-items: center;
+    background-image: url("../assets/textures/HP3.png");
+    background-size: cover;
+
+}
+
+
+
+
+#settings, #results, #app{
+    display: none;
+}
+
+#home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-image: url("../assets/textures/HP3.png");
+    background-size: cover;
+}
+
+#home .title{
+    margin-top: 14vh;
+    font-family: BadMofo;
+    font-size: 12vw;
+    color: #000;
+    text-shadow: #000;
+    animation-name: fontGrowth;
+    animation-duration: 2s;
+    margin-bottom: 4vh;
+}
+
+#settings .title{
+    margin-top: 16vh;
+    font-family: BadMofo;
+    font-size: 10vw;
+    color: #000;
+    margin-bottom: 4vh;
+    text-shadow: #2c3e50;
+}
+
+@keyframes fontGrowth {
+    from {font-size: 0vw;}
+    to {font-size: 12vw;}
+  }
+
+#home .suppaButton{
+    font-family: Motorblock;
+    font-size: 3.5vw;
+    color: aliceblue;
+    padding: 1vw 1.5vw;
+    border: 1px solid goldenrod;
+    cursor: pointer;
+}
+
+.start-btn{
+    font-family: Motorblock;
+    text-align: center;
+	display: inline-block;
+	margin:5px;
+    padding: 15px 15px 15px 15px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+    font-size: 4vw;
+}
+
+.start-btn2{
+    font-family: Motorblock;
+    text-align: center;
+	display: inline-block;
+	margin:20px;
+    padding: 15px 15px 15px 15px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	-o-border-radius: 9px;
+	border-radius: 9px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+    font-size: 4vw;
+}
+
+.start-btn3{
+    font-family: Motorblock;
+    text-align: center;
+	display: inline-block;
+	margin:20px;
+    padding: 15px 15px 15px 15px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	-o-border-radius: 9px;
+	border-radius: 9px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+    font-size: 4vw;
+}
+
+
+#options{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    padding: 15px;
+    background: #000;
+    color: white;
+    border-radius: 5px;
+    width: 10vw;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.8);
+    display: none;
+}
+
+.player{
+    position: absolute;
+    top: 20%;
+    margin: 5px;
+    background: rgba(0,0,0,0.8);
+    border: 1px snow;
+    color: aliceblue;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 10vw;
+    display: flex;
+}
+
+.player .color{
+    flex: 4;
+    background: #2c3e50;
+}
+
+.player .name{
+    flex: 6;
+    margin-left: 4px;
+}
